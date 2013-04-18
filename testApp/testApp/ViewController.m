@@ -20,6 +20,22 @@
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 768.0f, 100.0f)];
+    
+    if (titleLabel)
+    {
+        titleLabel.backgroundColor = [UIColor redColor];
+        titleLabel.font = [UIFont boldSystemFontOfSize:50.0f];
+        titleLabel.adjustsFontSizeToFitWidth = YES;
+        titleLabel.text = @"The Davinci Code";
+        titleLabel.textAlignment = NSTextAlignmentCenter;
+    }
+    
+    [self.view addSubview:titleLabel];
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
