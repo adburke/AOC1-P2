@@ -17,6 +17,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = [UIColor colorWithRed:0.1f green:0.3f blue:0.25f alpha:1.0f];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
