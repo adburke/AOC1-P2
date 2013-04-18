@@ -34,6 +34,34 @@
     }
     
     [self.view addSubview:titleLabel];
+    
+    authorLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 120.0f, 384.0f, 50.0f)];
+    
+    if (authorLabel)
+    {
+        authorLabel.backgroundColor = [UIColor blueColor];
+        authorLabel.font = [UIFont systemFontOfSize:25];
+        authorLabel.textColor = [UIColor whiteColor];
+        authorLabel.adjustsFontSizeToFitWidth = YES;
+        authorLabel.text = @"Author:";
+        authorLabel.textAlignment = NSTextAlignmentRight;
+    }
+    
+    [self.view addSubview:authorLabel];
+    
+    authorText = [[UILabel alloc] initWithFrame:CGRectMake(384.0f, 120.0f, 384.0f, 50.0f)];
+    
+    if (authorText)
+    {
+        authorText.backgroundColor = [UIColor yellowColor];
+        authorText.font = [UIFont systemFontOfSize:25];
+        authorText.textColor = [UIColor brownColor];
+        authorText.adjustsFontSizeToFitWidth = YES;
+        authorText.text = @"Dan Brown";
+        authorText.textAlignment = NSTextAlignmentLeft;
+    }
+    
+    [self.view addSubview:authorText];
 }
 
 - (void)didReceiveMemoryWarning
