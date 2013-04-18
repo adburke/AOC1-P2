@@ -91,6 +91,35 @@
     }
     
     [self.view addSubview:pubText];
+    
+    sumLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 260.0f, 384.0f, 50.0f)];
+    
+    if (sumLabel)
+    {
+        sumLabel.backgroundColor = [UIColor magentaColor];
+        sumLabel.font = [UIFont boldSystemFontOfSize:25.0f];
+        sumLabel.textColor = [UIColor colorWithRed:0.7f green:1.0f blue:0.0f alpha:1.0f ];
+        sumLabel.adjustsFontSizeToFitWidth = YES;
+        sumLabel.text = @"Summary:";
+        sumLabel.textAlignment = NSTextAlignmentLeft;
+    }
+    
+    [self.view addSubview:sumLabel];
+    
+    sumText = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 330.0f, 768.0f, 150.0f)];
+    
+    if (sumText)
+    {
+        sumText.backgroundColor = [UIColor orangeColor];
+        sumText.font = [UIFont boldSystemFontOfSize:25.0f];
+        sumText.textColor = [UIColor colorWithRed:0.0f green:0.1f blue:0.5f alpha:1.0f];
+        sumText.adjustsFontSizeToFitWidth = YES;
+        sumText.text = @"It follows symbologist Robert Langdon and Sophie Neveu as they investigate a murder in Paris's Louvre Museum and discover a battle between the Priory of Sion and Opus Dei over the possibility of Jesus having been married to Mary Magdalene.";
+        sumText.numberOfLines = 4;
+        sumText.textAlignment = NSTextAlignmentCenter;
+    }
+    
+    [self.view addSubview:sumText];
 }
 
 - (void)didReceiveMemoryWarning
