@@ -198,4 +198,15 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)didRotateFromInterfaceOrientation:(UIInterfaceOrientation)fromInterfaceOrientation
+{
+    NSLog(@"rotate fired from %d", fromInterfaceOrientation);
+    
+}
+
+-(void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation duration:(NSTimeInterval)duration
+{
+    NSLog(@"Will rotate to %d in %f seconds", toInterfaceOrientation, duration);
+}
+
 @end
