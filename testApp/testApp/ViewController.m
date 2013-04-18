@@ -86,7 +86,7 @@
         pubText.font = [UIFont systemFontOfSize:25];
         pubText.textColor = [UIColor darkGrayColor];
         pubText.adjustsFontSizeToFitWidth = YES;
-        pubText.text = @"Some Date TBD";
+        pubText.text = @"April 2003";
         pubText.textAlignment = NSTextAlignmentLeft;
     }
     
@@ -140,7 +140,7 @@
     //    NSArray *listItems = [[NSArray alloc] initWithObjects:@"Illuminati", @"Priory of Scion", @"test3", @"test4", @"test5", nil];
     
     // Array literal
-    NSArray *listItems = @[@"Illuminati", @"Priory of Scion", @"Bible", @"test4", @"test5"];
+    NSArray *listItems = @[@"Opus Dei", @"Priory of Scion", @"Bible", @"Holy Grail", @"Louvre"];
     
     //    NSMutableArray *mutListItems = [[NSMutableArray alloc] initWithCapacity:5];
     
@@ -153,6 +153,43 @@
     //    for (int i = 0; i < listItems.count; i++) {
     //        [mutListItems addObject:listItems[i]];
     //    }
+    
+    NSMutableString *mutListString = [[NSMutableString alloc] initWithCapacity:50];
+    
+    for (int i = 0, j = listItems.count; i < j; i++) {
+        if (i == j - 1){
+            [mutListString appendFormat:@" and %@ ",[listItems objectAtIndex:i]];
+        } else {
+            [mutListString appendFormat:@"%@, ", [listItems objectAtIndex:i]];
+        }
+    }
+    //    Test fast enumeration
+    //    int index = 0;
+    //    for (id obj in listItems) {
+    //        if (index == listItems.count - 1){
+    //            [mutListString appendFormat:@" and %@ ",obj];
+    //        } else {
+    //            [mutListString appendFormat:@"%@, ", obj];
+    //        }
+    //        index++;
+    //    }
+    
+    listText = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 570.0f, 768.0f, 50.0f)];
+    
+    if (listText)
+    {
+        listText.backgroundColor = [UIColor colorWithRed:0.0f green:0.7f blue:0.3f alpha:1.0f];
+        listText.font = [UIFont boldSystemFontOfSize:25.0f];
+        listText.textColor = [UIColor colorWithRed:0.2f green:0.2f blue:0.3f alpha:1.0f];
+        listText.adjustsFontSizeToFitWidth = YES;
+        listText.text = mutListString;
+        listText.numberOfLines = 7;
+        listText.textAlignment = NSTextAlignmentCenter;
+    }
+    
+    [self.view addSubview:listText];
+    
+    [super viewWillAppear:animated];
 }
 
 - (void)didReceiveMemoryWarning
