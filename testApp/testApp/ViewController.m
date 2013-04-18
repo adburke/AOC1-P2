@@ -62,6 +62,35 @@
     }
     
     [self.view addSubview:authorText];
+    
+    pubLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 190.0f, 384.0f, 50.0f)];
+    
+    if (pubLabel)
+    {
+        pubLabel.backgroundColor = [UIColor greenColor];
+        pubLabel.font = [UIFont systemFontOfSize:25];
+        pubLabel.textColor = [UIColor grayColor];
+        pubLabel.adjustsFontSizeToFitWidth = YES;
+        pubLabel.text = @"Published:";
+        pubLabel.textAlignment = NSTextAlignmentRight;
+    }
+    
+    [self.view addSubview:pubLabel];
+    
+    
+    pubText = [[UILabel alloc] initWithFrame:CGRectMake(384.0f, 190.0f, 384.0f, 50.0f)];
+    
+    if (pubText)
+    {
+        pubText.backgroundColor = [UIColor cyanColor];
+        pubText.font = [UIFont systemFontOfSize:25];
+        pubText.textColor = [UIColor darkGrayColor];
+        pubText.adjustsFontSizeToFitWidth = YES;
+        pubText.text = @"Some Date TBD";
+        pubText.textAlignment = NSTextAlignmentLeft;
+    }
+    
+    [self.view addSubview:pubText];
 }
 
 - (void)didReceiveMemoryWarning
