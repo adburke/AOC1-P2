@@ -17,12 +17,14 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    // Changing view background color
     self.view.backgroundColor = [UIColor colorWithRed:0.1f green:0.3f blue:0.25f alpha:1.0f];
 	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
+    // Title Section
     titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 0.0f, 768.0f, 100.0f)];
     
     if (titleLabel)
@@ -36,6 +38,7 @@
     
     [self.view addSubview:titleLabel];
     
+    // Author Section
     authorLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 120.0f, 384.0f, 50.0f)];
     
     if (authorLabel)
@@ -64,6 +67,7 @@
     
     [self.view addSubview:authorText];
     
+    // Published Section
     pubLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 190.0f, 384.0f, 50.0f)];
     
     if (pubLabel)
@@ -93,6 +97,7 @@
     
     [self.view addSubview:pubText];
     
+    // Summary Section
     sumLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 260.0f, 384.0f, 50.0f)];
     
     if (sumLabel)
@@ -115,13 +120,14 @@
         sumText.font = [UIFont boldSystemFontOfSize:25.0f];
         sumText.textColor = [UIColor colorWithRed:0.0f green:0.1f blue:0.5f alpha:1.0f];
         sumText.adjustsFontSizeToFitWidth = YES;
-        sumText.text = @"It follows symbologist Robert Langdon and Sophie Neveu as they investigate a murder in Paris's Louvre Museum and discover a battle between the Priory of Sion and Opus Dei over the possibility of Jesus having been married to Mary Magdalene.";
+        sumText.text = @"The book follows Robert Langdon and Sophie Neveu as they investigate a murder in Paris's Louvre Museum and discover a battle between the Priory of Sion and Opus Dei over the possibility of Jesus having been married to Mary Magdalene.";
         sumText.numberOfLines = 4;
         sumText.textAlignment = NSTextAlignmentCenter;
     }
     
     [self.view addSubview:sumText];
     
+    // List Items Label
     listLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 500.0f, 384.0f, 50.0f)];
     
     if (listLabel)
@@ -138,10 +144,10 @@
     [self.view addSubview:listLabel];
     
     //    Standard Array Syntax
-    //    NSArray *listItems = [[NSArray alloc] initWithObjects:@"Illuminati", @"Priory of Scion", @"test3", @"test4", @"test5", nil];
+    NSArray *listItems = [[NSArray alloc] initWithObjects:@"Opus Dei", @"Priory of Scion", @"Bible", @"Holy Grail", @"Louvre", nil];
     
     // Array literal
-    NSArray *listItems = @[@"Opus Dei", @"Priory of Scion", @"Bible", @"Holy Grail", @"Louvre"];
+    // NSArray *listItems = @[@"Opus Dei", @"Priory of Scion", @"Bible", @"Holy Grail", @"Louvre"];
     
     //    NSMutableArray *mutListItems = [[NSMutableArray alloc] initWithCapacity:5];
     
@@ -175,6 +181,7 @@
     //        index++;
     //    }
     
+    // Creating the list text
     listText = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 570.0f, 768.0f, 50.0f)];
     
     if (listText)
