@@ -135,6 +135,24 @@
     }
     
     [self.view addSubview:listLabel];
+    
+    //    Standard Array Syntax
+    //    NSArray *listItems = [[NSArray alloc] initWithObjects:@"Illuminati", @"Priory of Scion", @"test3", @"test4", @"test5", nil];
+    
+    // Array literal
+    NSArray *listItems = @[@"Illuminati", @"Priory of Scion", @"Bible", @"test4", @"test5"];
+    
+    //    NSMutableArray *mutListItems = [[NSMutableArray alloc] initWithCapacity:5];
+    
+    //    Standard Array Query
+    //    for (int i = 0; i < listItems.count; i++) {
+    //        [mutListItems addObject:[listItems objectAtIndex:i]];
+    //    }
+    
+    //  Subscript Query
+    //    for (int i = 0; i < listItems.count; i++) {
+    //        [mutListItems addObject:listItems[i]];
+    //    }
 }
 
 - (void)didReceiveMemoryWarning
