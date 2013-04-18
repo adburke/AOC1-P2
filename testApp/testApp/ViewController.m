@@ -120,6 +120,21 @@
     }
     
     [self.view addSubview:sumText];
+    
+    listLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0f, 500.0f, 384.0f, 50.0f)];
+    
+    if (listLabel)
+    {
+        listLabel.backgroundColor = [UIColor lightGrayColor];
+        listLabel.font = [UIFont boldSystemFontOfSize:25.0f];
+        listLabel.textColor = [UIColor colorWithRed:0.102f green:0.40f blue:0.224f alpha:1.0f];
+        listLabel.adjustsFontSizeToFitWidth = YES;
+        listLabel.text = @"List of Items:";
+        listLabel.numberOfLines = 7;
+        listLabel.textAlignment = NSTextAlignmentLeft;
+    }
+    
+    [self.view addSubview:listLabel];
 }
 
 - (void)didReceiveMemoryWarning
